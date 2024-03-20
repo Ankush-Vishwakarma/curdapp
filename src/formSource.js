@@ -74,4 +74,8 @@ export const userInputs = [
       placeholder: "in stock",
     },
   ];
-  
+
+  export const commentInputs = [
+   
+  ];
+    

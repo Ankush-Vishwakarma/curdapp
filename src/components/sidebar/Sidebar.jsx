@@ -16,6 +16,8 @@ import CommentIcon from "@mui/icons-material/Comment";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import CommentIcon from '@mui/icons-material/Comment';
+
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -98,7 +100,13 @@ const Sidebar = () => {
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
-        </ul>
+          <Link to="/comment" style={{ textDecoration: "none" }}>
+          <li>
+            <CommentIcon className="icon" />
+            <span>Comment</span>
+          </li>
+          </Link>        
+          </ul>
       </div>
       <div className="bottom">
         <div

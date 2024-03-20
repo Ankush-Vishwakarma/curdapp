@@ -3,8 +3,9 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
+import Comment from "./components/comment/comment"; // Importing comment component
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { productInputs, userInputs } from "./formSource";
+import { commentInputs, productInputs, userInputs } from "./formSource";
 import "./style/dark.css";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
@@ -14,8 +15,7 @@ import List2 from "./pages/list/List2";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
-
-  const {currentUser} = useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext);
 
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to="/login" />;
@@ -109,7 +109,18 @@ function App() {
                 }
               />
             </Route>
-          </Route>
+            {/* Add the Route for the comment component */}
+            <Route path="comment" element={<Comment inputs={commentInputs} title="Add A Comment" />} />
+            </Route>
+            {/* <Route path="/comments"
+                index
+                element={
+                  <RequireAuth>
+                    <Comment />
+                  </RequireAuth>
+                }
+              />
+          </Route> */}
         </Routes>
       </BrowserRouter>
     </div>

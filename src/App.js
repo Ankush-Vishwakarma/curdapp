@@ -10,8 +10,6 @@ import "./style/dark.css";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
-import Datatable1 from "./components/datatable/Datatable1";
-import List2 from "./pages/list/List2";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -108,19 +106,21 @@ function App() {
                   </RequireAuth>
                 }
               />
+              
             </Route>
-            {/* Add the Route for the comment component */}
-            <Route path="comment" element={<Comment inputs={commentInputs} title="Add A Comment" />} />
-            </Route>
-            {/* <Route path="/comments"
-                index
-                element={
-                  <RequireAuth>
-                    <Comment />
-                  </RequireAuth>
-                }
+            
+            {/* ===== */}
+            <Route>
+            <Route
+              path="ImageAdd"
+              element={
+                <RequireAuth>
+                  <ImageAdd/>
+                </RequireAuth>
+              }
               />
-          </Route> */}
+            </Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

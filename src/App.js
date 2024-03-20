@@ -9,6 +9,8 @@ import "./style/dark.css";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
+import Datatable1 from "./components/datatable/Datatable1";
+import List2 from "./pages/list/List2";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -50,6 +52,8 @@ function App() {
                   </RequireAuth>
                 }
               />
+
+
               <Route
                 path="new"
                 element={
@@ -58,6 +62,26 @@ function App() {
                   </RequireAuth>
                 }
               />
+
+
+              
+            </Route>
+
+
+
+            <Route path="Datatable1">
+              <Route
+                index
+                element={
+                  <RequireAuth>
+                       <List2/>
+                  </RequireAuth>
+                }
+              />
+            
+
+
+              
             </Route>
             <Route path="products">
               <Route

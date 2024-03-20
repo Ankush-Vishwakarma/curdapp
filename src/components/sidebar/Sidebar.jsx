@@ -11,6 +11,8 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+
+import CommentIcon from "@mui/icons-material/Comment";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
@@ -21,7 +23,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">lamadmin</span>
+          <span className="logo">Ankush vishwakarma</span>
         </Link>
       </div>
       <hr />
@@ -39,6 +41,7 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </Link>
+
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
@@ -53,6 +56,17 @@ const Sidebar = () => {
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
           </li>
+
+          {/* ------------------------------------------------------------------------------------------------ */}
+
+          <Link to="/Datatable1" style={{ textDecoration: "none" }}>
+            <li>
+              <CommentIcon className="icon" />
+              <span>Users comment</span>
+            </li>
+          </Link>
+
+          {/* ------------------------------------------------------------------------------------------------ */}
           <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />

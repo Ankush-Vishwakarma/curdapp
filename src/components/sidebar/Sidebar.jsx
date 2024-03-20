@@ -1,4 +1,7 @@
 import "./sidebar.css";
+
+import CollectionsIcon from '@mui/icons-material/Collections';
+import ImageAdd from "../Add_Images/ImageAdd";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
@@ -84,6 +87,14 @@ const Sidebar = () => {
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
+
+            <Link to="/ImageAdd" >
+          <li>
+            <CollectionsIcon className="icon"  />
+            <span>Image</span>
+          </li>
+            </Link>
+
         </ul>
       </div>
       <div className="bottom">

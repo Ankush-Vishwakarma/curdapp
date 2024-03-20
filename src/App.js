@@ -9,6 +9,7 @@ import "./style/dark.css";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
+import ImageAdd from "./components/Add_Images/ImageAdd";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -84,7 +85,22 @@ function App() {
                   </RequireAuth>
                 }
               />
+              
             </Route>
+            
+            {/* ===== */}
+            <Route>
+            <Route
+              path="ImageAdd"
+              element={
+                <RequireAuth>
+                  <ImageAdd/>
+                </RequireAuth>
+              }
+              />
+            </Route>
+            {/* ===== */}
+
           </Route>
         </Routes>
       </BrowserRouter>

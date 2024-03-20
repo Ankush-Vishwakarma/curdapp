@@ -1,23 +1,9 @@
-.new {
-  display: flex;
-  height: 100vh;
-}
 
-.newContainer {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-.top {
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-}
 
 .bottom {
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+
 }
 
 .right {
@@ -62,7 +48,7 @@
 
 .commentBox textarea {
   width: 95%;
-  height: 100px;
+  height: 300px;
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 5px;

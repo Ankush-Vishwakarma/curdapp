@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/curdapp/static/css/main.2741451a.css",
-    "main.js": "/curdapp/static/js/main.de0d912c.js",
+    "main.css": "/curdapp/static/css/main.03ad07b2.css",
+    "main.js": "/curdapp/static/js/main.75f1937d.js",
     "static/js/453.6ef0cb8f.chunk.js": "/curdapp/static/js/453.6ef0cb8f.chunk.js",
     "index.html": "/curdapp/index.html",
-    "main.2741451a.css.map": "/curdapp/static/css/main.2741451a.css.map",
-    "main.de0d912c.js.map": "/curdapp/static/js/main.de0d912c.js.map",
+    "main.03ad07b2.css.map": "/curdapp/static/css/main.03ad07b2.css.map",
+    "main.75f1937d.js.map": "/curdapp/static/js/main.75f1937d.js.map",
     "453.6ef0cb8f.chunk.js.map": "/curdapp/static/js/453.6ef0cb8f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2741451a.css",
-    "static/js/main.de0d912c.js"
+    "static/css/main.03ad07b2.css",
+    "static/js/main.75f1937d.js"
   ]
 }

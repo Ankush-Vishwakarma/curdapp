@@ -3,7 +3,7 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import Comment from "./components/comment/comment"; // Importing comment component
+import Comment from "./components/comment/comment"; 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { commentInputs, productInputs, userInputs } from "./formSource";
 import "./style/dark.css";
@@ -14,6 +14,9 @@ import List2 from "./pages/list/List2";
 import ImageAdd from "./components/Add_Images/ImageAdd";
 
 function App() {
+
+
+  
   const { darkMode } = useContext(DarkModeContext);
   const { currentUser } = useContext(AuthContext);
 
@@ -111,7 +114,6 @@ function App() {
               
             </Route>
             
-            {/* ===== */}
             <Route>
             <Route
               path="ImageAdd"

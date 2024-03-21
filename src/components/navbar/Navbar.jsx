@@ -8,9 +8,25 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { LANGUAGES } from "../../constants/constants";
+
+import { useTranslation } from 'react-i18next';
+
 
 const Navbar = () => {
+
+
+
+
   const { dispatch } = useContext(DarkModeContext);
+
+ 
+  const { i18n, t } = useTranslation();
+
+const onChangeLang = (e) => {
+    const lang_code = e.target.value;
+    i18n.changeLanguage(lang_code);
+  };
 
   return (
     <div className="navbar">
@@ -20,10 +36,14 @@ const Navbar = () => {
           <SearchOutlinedIcon />
         </div>
         <div className="items">
-          <div className="item">
-            <LanguageOutlinedIcon className="icon" />
-            English
-          </div>
+        <LanguageOutlinedIcon className="icon" />
+        <select defaultValue={i18n.language} onChange={onChangeLang}>
+        {LANGUAGES.map(({ code, label }) => (
+          <option key={code} value={code}>
+            {label}
+          </option>
+        ))}
+      </select>
           <div className="item">
             <DarkModeOutlinedIcon
               className="icon"

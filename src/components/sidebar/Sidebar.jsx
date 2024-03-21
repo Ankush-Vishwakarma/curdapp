@@ -20,15 +20,18 @@ import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import CommentIcon from '@mui/icons-material/Comment';
+import { useTranslation } from "react-i18next";
 
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
+
+  const {t}= useTranslation();
   return (
     <div className="sidebar">
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <span className="logo">Ankush vishwakarma</span>
+          <span className="logo">{t('title')}</span>
         </Link>
       </div>
       <hr />
@@ -37,29 +40,29 @@ const Sidebar = () => {
           <p className="title">MAIN</p>
           <li>
             <DashboardIcon className="icon" />
-            <span>Dashboard</span>
+            <span>{t('label')}</span>
           </li>
           <p className="title">LISTS</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
-              <span>Users</span>
+              <span>{t('about')}</span>
             </li>
           </Link>
 
           <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
-              <span>Products</span>
+              <span>{t('home')}</span>
             </li>
           </Link>
           <li>
             <CreditCardIcon className="icon" />
-            <span>Orders</span>
+            <span>{t('user')}</span>
           </li>
           <li>
             <LocalShippingIcon className="icon" />
-            <span>Delivery</span>
+            <span>{t('Delivery')}</span>
           </li>
 
           {/* ------------------------------------------------------------------------------------------------ */}
@@ -75,33 +78,33 @@ const Sidebar = () => {
           <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />
-            <span>Stats</span>
+            <span>{t('Stats')}</span>
           </li>
           <li>
             <NotificationsNoneIcon className="icon" />
-            <span>Notifications</span>
+            <span>{t('Notifications')}</span>
           </li>
           <p className="title">SERVICE</p>
           <li>
             <SettingsSystemDaydreamOutlinedIcon className="icon" />
-            <span>System Health</span>
+            <span>{t('SystemHealth')}</span>
           </li>
           <li>
             <PsychologyOutlinedIcon className="icon" />
-            <span>Logs</span>
+            <span>{t('Logs')}</span>
           </li>
           <li>
             <SettingsApplicationsIcon className="icon" />
-            <span>Settings</span>
+            <span>{t('Settings')}</span>
           </li>
           <p className="title">USER</p>
           <li>
             <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
+            <span>{t('Profile')}</span>
           </li>
           <li>
             <ExitToAppIcon className="icon" />
-            <span>Logout</span>
+            <span>{t('Logout')}</span>
           </li>
           <Link to="/comment" style={{ textDecoration: "none" }}>
           <li>

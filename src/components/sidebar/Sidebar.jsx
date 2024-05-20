@@ -74,6 +74,14 @@ const Sidebar = () => {
             </li>
           </Link>
 
+
+          <Link to="/Payment" style={{ textDecoration: "none" }}>
+            <li>
+              <CommentIcon className="icon" />
+              <span>payment</span>
+            </li>
+          </Link>
+
           {/* ------------------------------------------------------------------------------------------------ */}
           <p className="title">USEFUL</p>
           <li>
@@ -109,6 +117,7 @@ const Sidebar = () => {
           <Link to="/comment" style={{ textDecoration: "none" }}>
           <li>
             <CommentIcon className="icon" />
+            
             <span>Comment</span>
           </li>
           </Link>  
@@ -118,7 +127,9 @@ const Sidebar = () => {
             <CollectionsIcon className="icon"  />
             <span>Image</span>
           </li>
-            </Link>      
+            </Link>   
+            
+               
           </ul>
 
        

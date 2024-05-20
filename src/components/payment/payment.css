@@ -1,0 +1,37 @@
+/* payment.css */
+.payment-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card-element-container {
+    margin-bottom: 20px;
+  }
+  
+  .payment-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .payment-button:disabled { 
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    color: #28a745;
+    margin-bottom: 10px;
+  }
+  

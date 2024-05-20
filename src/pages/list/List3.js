@@ -5,13 +5,13 @@ import Datatable1 from "../../components/datatable/Datatable1"
 import Payment from "../../components/payment/Payment"
 
 
-const List2 = () => {
+const List3 = () => {
   return (
     <div className="list">
       <Sidebar/>
       <div className="listContainer">
         <Navbar/>
-       
+     
         <Payment/>
 
 
@@ -23,4 +23,4 @@ const List2 = () => {
   )
 }
 
-export default List2
+export default List3

@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import List2 from "./pages/list/List2";
+import List3 from "./pages/list/List3";
 import ImageAdd from "./components/Add_Images/ImageAdd";
 
 function App() {
@@ -78,6 +79,21 @@ function App() {
                 element={
                   <RequireAuth>
                        <List2/>
+                  </RequireAuth>
+                }
+              />
+            
+
+
+              
+            </Route>
+
+            <Route path="Payment">
+              <Route
+                index
+                element={
+                  <RequireAuth>
+                       <List3/>
                   </RequireAuth>
                 }
               />
